@@ -16,7 +16,7 @@ export interface UpdateListingModalProps {
     currentPrice: number | undefined
 }
 
-export const UpdateListingModal = ({
+const UpdateListingModal = ({
     isVisible,
     onClose,
     nftMarketplaceAbi,
@@ -28,7 +28,7 @@ export const UpdateListingModal = ({
 }: UpdateListingModalProps) => {
     const dispatch = useNotification()
 
-    const [priceToUpdateListingWith, setPriceToUpdateListingWith] = useState(0)
+    const [priceToUpdateListingWith, setPriceToUpdateListingWith] = useState<string | undefined>()
 
     const handleUpdateListingSuccess = async (tx) => {
         await tx.wait(1)
@@ -144,3 +144,5 @@ export const UpdateListingModal = ({
         </Modal>
     )
 }
+
+export default UpdateListingModal

@@ -4,7 +4,7 @@ import { useWeb3Contract } from "react-moralis"
 import nftMarketplaceAbi from "../constants/NftMarketplace.json"
 import { ethers } from "ethers"
 
-export default function UpdateListingModal({
+function UpdateListingModal({
     nftAddress,
     tokenId,
     isVisible,
