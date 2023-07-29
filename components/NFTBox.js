@@ -108,10 +108,13 @@ export default function NFTBox({ price, nftAddress, tokenId, marketplaceAddress,
                     <div>
                         <UpdateListingModal
                             isVisible={showModal}
-                            tokenId={tokenId}
+                            onClose={hideModal}
+                            nftMarketplaceAbi={nftMarketplaceAbi}
                             marketplaceAddress={marketplaceAddress}
                             nftAddress={nftAddress}
-                            onClose={hideModal}
+                            tokenId={tokenId}
+                            imageURI={imageURI}
+                            currentPrice={price}
                         />
                         <Card
                             title={tokenName}
