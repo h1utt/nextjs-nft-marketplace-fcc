@@ -5,18 +5,7 @@ import { ethers } from "ethers"
 import Image from "next/image"
 import React from 'react'
 
-export interface UpdateListingModalProps {
-    isVisible: boolean
-    onClose: () => void
-    nftMarketplaceAbi: object
-    marketplaceAddress: string
-    nftAddress: string
-    tokenId: string
-    imageURI: string | undefined
-    currentPrice: number | undefined
-}
-
-const UpdateListingModal = ({
+function UpdateListingModal ({
     isVisible,
     onClose,
     nftMarketplaceAbi,
@@ -25,10 +14,10 @@ const UpdateListingModal = ({
     tokenId,
     imageURI,
     currentPrice,
-}: UpdateListingModalProps) => {
+}) {
     const dispatch = useNotification()
 
-    const [priceToUpdateListingWith, setPriceToUpdateListingWith] = useState<string | undefined>()
+    const [priceToUpdateListingWith, setPriceToUpdateListingWith] = useState("")
 
     const handleUpdateListingSuccess = async (tx) => {
         await tx.wait(1)
