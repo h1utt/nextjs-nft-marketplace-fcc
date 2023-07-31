@@ -5,7 +5,7 @@ import nftAbi from "../constants/BasicNft.json"
 import Image from "next/image"
 import { Modal, Button, Card, useNotification } from "web3uikit"
 import { ethers } from "ethers"
-import UpdateListingModal from "./UpdateListingModal"
+import UpdateListingModal from "./UpdateListingModal.jsx"
 
 const truncateStr = (fullStr, strLen) => {
     if (fullStr.length <= strLen) return fullStr

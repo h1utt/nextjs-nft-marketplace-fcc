@@ -91,7 +91,7 @@ function UpdateListingModal ({
                     <p className="p-4 text-lg">
                         This is your listing. You may either update the listing price or cancel it.
                     </p>
-                    <div className="flex flex-col items-end gap-2 border-solid border-2 border-gray-400 rounded p-2 w-fit">
+                    <div className="flex flex-col items-end gap-2 border-solid border-2 border-gray-400 rounded p-2 mb-4 w-fit">
                         <div>#{tokenId}</div>
                         {imageURI ? (
                             <Image
